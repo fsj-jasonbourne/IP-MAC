@@ -1,5 +1,5 @@
 #
-1.Project introduction
+1.Project introduction \n
 This script is used for CEMS-CLIENT IP/MAC policy test(I dont want to talk anything about CEMS,its sucks)
 2.System environment parameters:
 This script environment is : NeoKylin release 6
