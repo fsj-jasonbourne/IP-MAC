@@ -20,7 +20,7 @@ function change_ip()
     \echo "${ip_all}"
     # 设置IP地址
     \sed -i "/IPADDR.*/s/=.*/=${ip_all}/g" ${ethx_path}	
-    \echo "${ip_all}">> /home/fsj/git/ip_mac_record.dat
+    \echo "${ip_all}">> /tmp/cems/ip_mac_record.dat
 } 
 function change_gateway()
 {
@@ -32,7 +32,7 @@ function change_gateway()
     \echo "${ip_all}"
     #改变网关地址
     \sed -i "/GATEWAY.*/s/=.*/=${ip_all}/g" ${ethx_path}
-    \echo "${ip_all}">> /home/fsj/git/ip_mac_record.dat
+    \echo "${ip_all}">> /tmp/cems/ip_mac_record.dat
 }
 function change_dns()
 {
@@ -53,7 +53,7 @@ function Main()
     do
     {
         date_now=`date +%H:%M:%S`
-        echo "------${i}times-----${date_now}" >> /home/fsj/git/ip_mac_record.dat
+        echo "------${i}times-----${date_now}" >> /tmp/cems/ip_mac_record.dat
         ((i++))
         change_ip
         echo "change ip success"
